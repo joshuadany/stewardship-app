@@ -38,7 +38,6 @@ import {
   AlertCircle,
   Camera,
   Image as ImageIcon,
-  Eye,
   Trash2
 } from 'lucide-react';
 
@@ -104,11 +103,10 @@ const ACTIVITY_CRITERIA = {
     
     { id: 'fight_1', category: '⚔️ 영적 싸움', title: '스마트폰 절제 (하루 1시간 이내 성공 - 부모 확인 필요)', points: 10 },
     
-    { id: 'evangel_1', category: '📢 전도 생활', title: '친구 전도 기도 부탁', points: 15 },
-    { id: 'evangel_2', category: '📢 전도 생활', title: '친구 전도 기도 명단 제출', points: 10 },
-    { id: 'evangel_3', category: '📢 전도 생활', title: '무등교회 전도집회 친구 인도 참석', points: 50 },
-    { id: 'evangel_4', category: '📢 전도 생활', title: '하계수양회 친구 인도 참석', points: 50 },
-    { id: 'evangel_5', category: '📢 전도 생활', title: '새친구 전도 초청 행사에 친구 인도하여 참석', points: 35 },
+    { id: 'evangel_1', category: '📢 전도 생활', title: '친구 전도 기도 부탁', points: 5 },
+    { id: 'evangel_2', category: '📢 전도 생활', title: '친구 전도 기도 명단 제출', points: 5 },
+    { id: 'evangel_3', category: '📢 전도 생활', title: '무등교회 전도집회 친구 인도 참석', points: 35 },
+    { id: 'evangel_4', category: '📢 전도 생활', title: '하계수양회 친구 인도 참석', points: 35 },
     
     { id: 'offering_1', category: '💰 헌금 생활', title: '주일헌금 드림', points: 10 },
     { id: 'offering_2', category: '💰 헌금 생활', title: '감사헌금/특별헌금 드림', points: 10 },
@@ -127,12 +125,12 @@ const ACTIVITY_CRITERIA = {
   ]
 };
 
-// --- 달란트 교환소 보상 목표 (새로 조정된 점수 기준 반영) ---
+// --- 달란트 교환소 보상 목표 ---
 const REWARDS = [
   { level: '🥉 브론즈', target: 250, reward: '편의점 상품권 5,000원' },
-  { level: '🥈 실버', target: 500, reward: '편의점 상품권 10,000원' },
-  { level: '🥇 골드', target: 700, reward: '올리브영 or 배달 상품권 30,000원 + 특별 수료증' },
-  { level: '👑 플래티넘', target: 900, reward: '올리브영 or 배달 상품권 50,000원 + 수련회 참가비 일부 지원 + 트로피' }
+  { level: '🥈 실버', target: 400, reward: '편의점 상품권 10,000원' },
+  { level: '🥇 골드', target: 600, reward: '올리브영 or 배달 상품권 30,000원 + 특별 수료증' },
+  { level: '👑 플래티넘', target: 800, reward: '올리브영 or 배달 상품권 50,000원 + 수련회 참가비 일부 지원 + 트로피' }
 ];
 
 export default function App() {
@@ -1927,7 +1925,7 @@ export default function App() {
               ✕
             </button>
             <div className="text-slate-800 font-black text-xs py-2">✝ 신앙 성장 경주 실시간 사진 증빙 자료</div>
-            <img src={viewerImage} alt="Stewardship Proof" className="w-full max-h-[70vh] object-contain rounded-2xl border" />
+            <img src={viewerImage} alt="Stewardship Race Proof" className="w-full max-h-[70vh] object-contain rounded-2xl border" />
             <p className="text-slate-400 text-3xs mt-2 italic text-center">화면 아무 데나 클릭하시면 창이 닫힙니다.</p>
           </div>
         </div>
